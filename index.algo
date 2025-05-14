@@ -1,0 +1,60 @@
+
+Algorithme ExerciceUn
+	Variables: 
+				nombre,compteur : entier 
+		Debut
+			compteur <-- 0
+
+			Repeter
+				Ecrire (Entrez un nombre entre 20 et 50)
+				Lire (nombre)
+				compteur <-- compteur + 1
+			Jusqu'as compteur = 3 OU nombre>=20 ET nombre<=50
+
+			Si nombre>=20 ET nombre<=50 Alors
+				Ecrire ("Bravo ")
+			Sinon
+				Ecrire ("Echoué")
+			FinSi
+		Fin
+Fin
+
+
+Algorithme ExerciceUn
+	Variables: 
+			n1   : entier 
+			n2,resultat : reel
+			o : caractère
+
+			Début
+				Ecrire ("Entrez un nombre entre entier et reel(2 chiffres après la virgule)")
+				Lire (nombre)
+
+				Repeter
+					Ecrire ("Saisir un entier")
+					Lire (n1)
+					Ecrire ("Saisir un reel")
+					Lire (n2)
+				jusqu'as(n1 > n2)
+
+				Ecrire ("Saisir une opération (+,-,x,:)")
+				Lire(o)
+
+				Selon o faire
+					cas '+': 
+						resultat<-- n1 + n2
+					cas '-': 
+						resultat<-- n1 - n2
+				cas 'x': 
+						resultat<-- n1 * n2
+				cas ':': 
+					Si n2 != 0 Alors 
+						resultat <--- n1 / n2
+					Sinon 
+						Ecrire("Erreur, on ne divie pas par 0")
+					FinSi
+				Autre: 
+			Ecrire("Opération invalide")
+		FinSelon
+	Ecrire("Le resultat est : ", resultat)
+Fin   
