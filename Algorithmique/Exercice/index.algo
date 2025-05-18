@@ -1,3 +1,4 @@
+-----------------------------------------------------------------------------------------------------
 
 Algorithme ExerciceUn
 	Variables: 
@@ -19,8 +20,9 @@ Algorithme ExerciceUn
 		Fin
 Fin
 
+-----------------------------------------------------------------------------------------------------
 
-Algorithme ExerciceUn
+Algorithme ExerciceDeux
 	Variables: 
 			n1   : entier 
 			n2,resultat : reel
@@ -48,7 +50,7 @@ Algorithme ExerciceUn
 				cas 'x': 
 						resultat<-- n1 * n2
 				cas ':': 
-					Si n2 != 0 Alors 
+					Si n2 <> Alors 
 						resultat <--- n1 / n2
 					Sinon 
 						Ecrire("Erreur, on ne divie pas par 0")
