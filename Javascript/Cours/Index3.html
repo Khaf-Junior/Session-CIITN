@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cours 2</title>
+</head>
+<body>
+    
+    <script>
+
+    let annee = prompt('Entrez votre année de naissance: ');
+    annee = parseInt(annee);
+
+    let age = 2025 - annee;
+
+    if(age < 18){
+        console.log("Vous etes au lycée");
+    } else if(age >= 18 && age <= 25){
+        console.log('Vous etes a l\'unniversité ')
+    } else{
+        console.log("Vous etes au travail");
+    }
+
+    </script>
+
+</body>
+</html>
