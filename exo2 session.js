@@ -50,5 +50,6 @@ function conduite(){
     else{
     alert('                       ');
  }
-               
+    
+ 
 }
