@@ -21,7 +21,7 @@ function age(){
 function conduite(){
     let pays=prompt ('entrez votre pays');
     let age=prompt('entrez votre age');
-        if (pays=france){
+        if (pays='france'){
             if(age>=18){
        alert('tu peux conduire');
        }
@@ -29,7 +29,7 @@ function conduite(){
         alert('tu ne peux pas conduire');
        }
         }
-       else if (pays=USA){
+       else if (pays='USA'){
         if(age=>16){
          alert('tu peux conduire');
         }
@@ -38,7 +38,7 @@ function conduite(){
         }
          
      }
-        else if (pays=Sénégal){
+        else if (pays='Sénégal'){
             if(age=>18){
          alert('tu peux conduire');
             }
