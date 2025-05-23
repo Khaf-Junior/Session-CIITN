@@ -1,0 +1,49 @@
+Pour 
+TantQue 
+Faire TantQue  --- Répeter Jusqu'as
+
+
+	Algorithme BouclePour
+			Variables:
+						compteur : entier
+		Debut	
+			
+			Pour compteur <-- 0 à 10 Faire
+				Afficher (compteur, '\n')
+			FinPour
+
+		Fin	
+
+
+	Algorithme BoucleTantQue
+			Variables:
+						compteur,n: entier
+		Debut
+			compteur <-- 0
+
+			Ecrire("Saisir une valeur: ")
+			Lire(n)
+
+			TantQue compteur <= 10 Faire
+				Ecrire(n, " x ",compteur," = ", n*compteur)
+				compteur <-- compteur + 1
+			FinTantQue
+		Fin
+
+
+	Algorithme BoucleTantQue
+			Variables:
+						compteur,n: entier
+		Debut
+			compteur <-- 0
+
+			Ecrire("Saisir une valeur: ")
+			Lire(n)
+
+			Repeter
+				Ecrire(n, " x ",compteur," = ", n*compteur)
+				compteur <-- compteur + 1
+			Jusqu'as compteur <= 10
+
+		Fin
+
