@@ -5,6 +5,6 @@
        
 
         for(compteur=0; compteur<=10; compteur++){
-            printf("Bonjour tout le monde\n");
+            printf("%d \n",compteur);
         }
     }
