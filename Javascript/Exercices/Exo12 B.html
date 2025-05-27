@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exo 12 B</title>
+</head>
+<body>
+    <script defer>
+        let codePin = prompt("Saisir un coded PIN");
+        codePin = parseInt(codePin);
+
+        let n = /^[0-9]{4}$/.test(codePin);
+        if(n){
+            alert("Code PIN valide");
+        }else{
+            alert("Code PIN invalide");
+        }
+    </script>
+</body>
+</html>

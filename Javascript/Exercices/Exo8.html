@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exo 8</title>
+</head>
+<body>
+    
+    <script defer>
+
+        let mdp = "Arame";
+        let n = 3;
+
+        while(n > 0){
+            let mdps = prompt("Entrez le mot de passe: ");
+            if(mdp === mdps){
+                alert('Bienvenue');
+            }else{
+                n--;
+                if(n>0){
+                    alert("Mot de passe incorrect il vous reste " + n + " tentatives");
+                }else{
+                    alert("accées refusés !");
+                }
+            }
+        }
+        
+    </script>
+
+</body>
+</html>

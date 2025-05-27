@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exo 7 js</title>
+</head>
+<body>
+    
+
+    <script defer>
+        let n = prompt("Saisir une valeur: ");
+        n = parseInt(n);
+
+        if(isNaN(n)){
+            console.log("Error, veuillez saisir un nombre")
+        }else{
+            console.log("Les multiples de 3 jusqu'as " + n + ' : ' );
+            for(let i = 0; i <= n; i++){
+                if(i % 3 === 0){
+                    console.log(i);
+                }
+            }
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exo 13</title>
+</head>
+<body>
+    
+
+    <script defer>
+       
+        
+        function Sommetableau (tableau){
+
+            let somme = 0;
+
+            for(let compteur = 0; compteur < tableau.length;compteur++ ){
+                somme = somme + tableau[compteur];
+            }
+            return somme;
+        }
+
+        let nombres = [12,4,4];
+        let resultats = Sommetableau(nombres);
+        alert("La somme du tableau est : " + resultats );
+
+    </script>
+
+</body>
+</html>
