@@ -1,0 +1,65 @@
+Algorithme LesTableaux_Zero
+		Variable:
+				tableau notes[5]: reel
+	Debut 
+
+		notes[0] <-- 12
+		afficher(notes[0])
+
+		notes[1] <-- 11
+		afficher(notes[1])
+
+		notes[2] <-- 8
+		afficher(notes[2])
+
+		notes[3] <-- 6
+		afficher(notes[3])
+
+		notes[4] <-- 4
+		afficher(notes[4])
+
+	Fin
+--------------------------------------------------------
+	Algorithme LesTableaux_Un
+		Variable:
+				tableau notes[5]: reel
+				a : entier
+	Debut 
+		Afficher("Saisir l'element 1 du tableau: ")
+		Lire(notes[0])
+
+		Afficher("Saisir l'element 2 du tableau: ")
+		Lire(notes[1])
+
+		Afficher("Saisir l'element 3 du tableau: ")
+		Lire(notes[2])
+
+		Afficher("Saisir l'element 4 du tableau: ")
+		Lire(notes[3])
+
+		Afficher("Saisir l'element 5 du tableau: ")
+		Lire(notes[4])
+
+		Afficher("Les elements saisis sont: ",notes[0]," ",notes[1]," ", notes[2]," ",notes[3]," ",notes[4])
+
+	Fin
+
+--------------------------------------------------------
+
+Algorithme Tableau_Dec
+		Variable:
+					Tableau notes[5]: entier
+					i: entier
+	Debut
+		pour i <-- 0 à 4 faire
+			Afficher ("Saisir l'entier numero ", i+1, " du tableau : " )
+			Lire (notes[i])
+		FinPour
+
+		Afficher("Les entiers saisis sont: ")
+
+		Pour i <-- 0 à 4 faire
+			Afficher (notes[i]," ")
+		FinPour
+
+	Fin
