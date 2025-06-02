@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +8,7 @@
 <body>
     
     <script defer>
+<<<<<<< HEAD
         let a=prompt('saisissez un nombre');
         let b=prompt('saisissez un autre nombre');
         a= parseFloat(a);
@@ -32,6 +33,27 @@
 
 
 
+=======
+        let a = prompt("Saisir une valeur: ");
+        let b = prompt("Saisir une autre valeur");
+
+        a = parseFloat(a);
+        b = parseFloat(b);
+
+        let y = a * b;
+
+        if(isNaN(y)){
+        console.log(`${a} x ${b} = Impossible`);
+        }else {
+            if( y > 0){
+            console.log(`${a} x ${b} = ${y} et il est positif`);
+        }else if(y<0){
+            console.log(`${a} x ${b} = ${y} et il est negatif`);
+        } else{
+            console.log(`${a} x ${b} = ${y} et il est nul`);
+        }   
+    }
+>>>>>>> 8a7e864f841f1c58b9cba3a0ee73c780d0e26ded
     </script>
 
 
