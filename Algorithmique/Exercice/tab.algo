@@ -2,14 +2,14 @@ algorithme tableau
  var:
  tab[n],i :entier
  début
- afficher(" entrer un entier")
- lire(n)
- pour i<--0 à n faire
-   afficher("entrer un" i+1 "entier")
-   finpour
-   afficher("les entier saisi sont: ")
-   pour i<--0 à n faire 
-   afficher (tab[i])
-   fin pour
-   fin
-fin
+    afficher(" entrer un entier")
+    lire(n)
+    pour i<--0 à n faire
+      afficher("entrer un" i+1 "entier")
+      finpour
+      afficher("les entier saisi sont: ")
+      pour i<--0 à n faire 
+      afficher (tab[i])
+      fin pour
+      fin
+  fin
