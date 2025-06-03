@@ -1,6 +1,6 @@
 algorithme tableau
        var:
-            tableau tab[n],i :entier
+            tableau tab[],i :entier
   début
       afficher(" entrer un entier")
       lire(n)
