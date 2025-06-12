@@ -1,0 +1,46 @@
+Algorithme Syntaxes
+	// Procedures
+	// Fonctions
+	// Variables
+
+	Debut
+
+	Fin
+
+	---------------------------
+
+Algorithme Procedure
+	Procedure Affichermessage()
+		Ecrire("Bonjour monsieur ")
+	FinProcedure
+
+	Debut
+		 Affichermessage()
+	Fin
+
+-------------------------------
+
+Algorithme Fonction
+
+	Fonction Somme(a: Entier, b: Reel) : Reel
+		Retourner a + b
+	FinFonction
+
+	Variable
+				a,somme: entier
+				b: Reel
+
+	Debut
+
+		Ecrire("Saisir un entier: ")
+		Lire(a)
+		Ecrire("Saisir un reel: ")
+		Lire(b)
+
+		somme <-- Somme(a, b)
+		Ecrire("Resultat: ", somme)
+	Fin
+
+-------------------------------------------
+
+
