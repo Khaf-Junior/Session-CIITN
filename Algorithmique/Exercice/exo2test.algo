@@ -1,0 +1,22 @@
+algorithme calcule
+var:
+      i ,tableau tab[n],som, moy: entier
+ début
+    ("entrer un entier")
+    lire (n)
+    tab[]<--n
+    pour i<--0 à n faire 
+       afficher("entrer un"i+1"entier")
+    fin pour
+    afficher("la somme des entiers saisis sont:")
+    pour i<--0 à  n faire
+        afficher(tab[i]+tab[i+1])
+        som<--tab[i]+tab[i+1]
+        lire('som')
+    fin pour 
+    afficher ("la moyenne des entiers saisis sont:")
+     moy<--som/n
+    lire('som')
+
+    fin
+fin

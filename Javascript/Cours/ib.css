@@ -1,0 +1,32 @@
+.Partie1{
+    display: flex;
+justify-content: center;
+display:inline-block
+
+}
+
+
+.Partie2{
+     display: flex;
+justify-content: space-between;
+display:inline-block
+
+
+}
+.pp1{
+margin-right:70% ;
+
+
+}
+
+.pp2{
+       margin-left:  70% ;
+       margin-top: 0px;
+
+}
+.pp3{
+  margin-right:  70% ;
+}
+.pp4{
+    margin-left:  70% ;
+}
