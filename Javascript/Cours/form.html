@@ -10,22 +10,25 @@
 <body>
     <div class="partie1">
        <div class="pp1"> <fieldset>
-            <legend>Puissance</legend>
-            <form action="post" method="" >
-                <label for="num1">nombre1</label><br>
-                <input type="number" mame="num1" id="num1"><br>
-                 <label for="num2" >nombre2</label><br>
-                <input type="number" mame="num1" id="num2"><br>
-                <button type="submit" onclick="afficher()">calculer</button><br>
+            <legend id="Puissance">Puissance</legend>
+            <form >
+                <label>nombre1</label><br>
+                <input type="number"  id="num1"><br>
+                 <label>nombre2</label><br>
+                <input type="number"  id="num2"><br><br>
+                <button type="submit" >calculer</button><br>
 
             </form>
         </fieldset>
     </div>
+    <script>
+        
+    </script>
              
         <div class="pp2">
             <fieldset>
               <legend>infos perso</legend>
-            <form action="post" method="" >
+            <form >
                 <label for="Prenom">Prenom</label><br>
                 <input type="text" mame="prenom" id="prenom"><br>
                  <label for="name">nom</label><br>
@@ -43,10 +46,10 @@
         <div class="pp3">
              <fieldset>
                 <legend>texte</legend>
-            <form action="post" method="" >   
+            <form  method="" >   
                <label for="saisi"> veuillez saisir un mot </label><br>
                <input type="text" name="text" id="text"><br>
-               <button type="submit" onclick="val2()">valider</button><br>
+               <button type="submit" >valider</button><br>
             </form>
         </fieldset>
         </div>
@@ -54,14 +57,12 @@
        <div class="pp4">
          <fieldset>
             <legend>Devinette</legend>
-            <form action="post" method="" >
+            <form  method="" >
                <label for="saisi"> nombre </label><br>
                <input type="number" name="nbr" id="nbr"><br>
-               <button type="submit" onclick="dev()">Deviner</button><br>
-
+               <button type="submit" >Deviner</button><br>
             </form>
         </fieldset>
-
        </div>
        
     </div>

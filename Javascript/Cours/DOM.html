@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    
+</style>
+<body>
+    <h1 >Intoduction au dom</h1>
+
+
+    <p id="bonjour">Bonjour</p>
+    <p id="monParagraphe" onclick="ibou()" > Bienvenue en session !</p>
+
+    <script>
+        const Emilie = document.getElementById("bonjour").textContent = "Bienvenue en session";
+        const Mariama = document.getElementById("bonjour").style.color = "green";
+        
+        function ibou(){
+            alert("Tu as cliqué !");
+        }
+
+        const pape = document.getElementById("monParagraphe").onclick = function(){
+            alert("La session est longue !");
+        }
+
+  
+    </script>
+</body>
+</html>
