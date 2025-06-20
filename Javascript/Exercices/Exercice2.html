@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puissance</title>
+</head>
+<style>
+    fieldset{
+        text-align: center;
+        margin-right: 300px;
+        margin-left: 300px;
+        margin-top: 100px;
+    }
+</style>
+<body>
+    <form>
+        <fieldset>
+            <legend>Puissance</legend>
+            <label >Nombre 1</label><br>
+            <input type="number"  id="num1" >
+            <p id="mess1"></p>
+            <br><br>
+
+            <label >Nombre 2</label><br><br>
+            <input type="number"  id="num2" >
+            <p id="mess2"></p><br><br>
+
+
+            <input type="button" onclick="valider()" value="Calculer">
+
+        </fieldset>
+    </form>
+    <p style="text-align: center;" id="resultat"></p>
+    
+    <script>
+        
+        function valider(){
+        const a = document.getElementById("num1").value;
+        const b = document.getElementById("num2").value;
+        const c = document.getElementById("mess1");
+        const d = document.getElementById("mess2");
+        const e = parseFloat(document.getElementById("num1").value);
+        const f = parseFloat(document.getElementById("num2").value);
+
+        if(a===""){
+            c.textContent = "Veuillez entrez un nombre ";
+            c.style.color = "red";
+        }else{
+             c.textContent = "";
+        }
+
+        if(b===""){
+            d.textContent = "Veuillez entrez un nombre ";
+            d.style.color = "red";
+        }else{
+            d.textContent = "";
+        }
+        
+        if(a!=="" || b!==""){
+            const p = Math.pow(e,f);
+            const r = document.getElementById("resultat");
+            r.textContent = e +" ^ "+f+" = "+p;
+            r.innerHTML = "<b> "+ e + " puissance "+ f + " = " + p + "</b>"; 
+        }
+
+        }
+
+    </script>
+
+</body>
+</html>

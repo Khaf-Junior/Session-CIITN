@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phrase</title>
+</head>
+<style>
+    fieldset{
+        text-align: center;
+        margin-right: 300px;
+        margin-left: 300px;
+        margin-top: 100px;
+    }
+</style>
+<body>
+    <form>
+        <fieldset>
+            <legend>Phrase</legend>
+            <label >Votre phrase</label><br><br>
+            <input type="text"  id="phrase" placeholder="Entrez votre phrase..." >
+            <p id="message"></p>
+
+
+            <br><br>
+
+            <input type="button" onclick="valider()" value="Valider">
+             <p id="resultat"></p>
+        </fieldset>
+    </form>
+
+    <script>
+        function valider(){
+            const a = document.getElementById("phrase").value;
+            const b = document.getElementById("message");
+
+            if(a === "" ){
+                b.textContent = "Ce champ est obligatoire !";
+                b.style.color = "red";
+            }else{
+                b.textContent = "";
+            }
+
+            if(a !== ""){
+                
+                document.getElementById("resultat").innerHTML = "<h1><u>" + a + "</u></h1>";
+            }
+
+        }
+    </script>
+</body>
+</html>
