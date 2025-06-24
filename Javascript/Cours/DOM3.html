@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label>Prenom</label><br>
+        <input type="text" id="prenom">
+        <p id="champ1"></p><br>
+
+        <label>Nom</label><br>
+        <input type="text" id="nom">
+        <p id="champ2"></p><br>
+
+        <label>Age</label><br> 
+        <input type="text" id="age">
+        <p id="champ3"></p><br><br>
+
+
+        <input type="button" onclick="AfficherInfos()" value="Afficher">
+    </form>
+    <p id="resultat"></p>
+
+    <script>
+        function AfficherInfos(){
+            const prenom = document.getElementById("prenom").value;
+            const nom = document.getElementById("nom").value;
+            const age = document.getElementById("age").value;
+
+            const champ1 = document.getElementById("champ1");
+            const champ2 = document.getElementById("champ2");
+            const champ3 = document.getElementById("champ3");
+
+            //
+            if(prenom===""){
+                champ1.textContent = "Veuillez entrez votre prenom !";
+                champ1.style.color = "red";
+            }else{
+                champ1.textContent = "";
+            }
+
+            // 
+            if(nom===""){
+                champ2.textContent = "Veuillez entrez votre nom !";
+                champ2.style.color = "red";
+            }else{
+                champ2.textContent = "";
+            }
+
+            // 
+            if(age===""){
+                champ3.textContent = "Veuillez entrez votre age !";
+                champ3.style.color = "red";
+            }else{
+                champ3.textContent = "";
+            }
+            
+            if(prenom!=="" && nom!=="" && age!=="" ){
+                const resultat = document.getElementById("resultat");
+                resultat.innerHTML = "<strong>Prenom: "+prenom+"<br>Nom: "+nom+"'<br>Age: "+age+"</strong>";
+            }
+        }
+        
+    </script>
+
+
+</body>
+</html>

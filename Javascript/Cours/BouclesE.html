@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    fieldset{
+        margin-top: 100px;
+        margin-right: 300px;
+        margin-left: 300px;
+    }
+</style>
+<body>
+    <h1>Les boucles en JavaScript</h1>
+
+    <form>
+        <fieldset>
+            <legend>Devinette</legend>
+            <label>Nombre: </label><br><br>
+            <input type="number" id="nombre" placeholder="Nombre à deviner...">
+            <p id="message"></p><br><br>
+            <input type="button" onclick="JeuDeDevinette()" value="Deviner">
+        </fieldset>
+    </form>
+    <p id="resultat">Resultat</p>
+
+    <script>
+        function JeuDeDevinette(){
+            
+            const a = document.getElementById("nombre").value;
+            const b = document.getElementById("message")
+            const resultat = document.getElementById("resultat");
+
+            if(a===""){
+                b.textContent = "Mettez le nombre à deviner";
+                b.style.color = "red";
+            }else{
+                b.textContent = "";
+            }
+
+            if(a!==""){
+                if(a % 2 === 0 && a>1 ){
+                    resultat.textContent = "Pair";
+                    resultat.style.color = "orange";
+                                        
+                }else{
+                    resultat.innerHTML = "<strong>Le nombre: "+ a +" est impair </strong>";
+                    resultat.style.color = "green";
+                }
+            }
+        }
+    </script>
+
+
+</body>
+</html>
