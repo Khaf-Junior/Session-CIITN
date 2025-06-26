@@ -1,3 +1,12 @@
+
+function factoriellle(n){
+    let resultat = 1;
+    for(let compteur=2;compteur<=n;compteur++){
+        resultat= resultat*compteur;
+    }
+    return resultat;
+}
+
 function factorielle(){
     let a= document.getElementById("num").value;
 
@@ -11,22 +20,20 @@ function factorielle(){
     }
 
     if(a!==""){
-        if(a>0){
-         a=parseFloat(a);
-        let i,p ;
-        p=1;
-        for(i=1;i<=a;i++){
-            p=p*i;
-         }
-         let r=document.getElementById("result");
-         r.innerHTML="<b>"+p+ "</b>";
-         r.style.color="pink";
-         r.style.fontSize="50px";
-        }
-        else{
-            r.innerHTML="IMPOSSIBLE";
-            r.style.color="red";
+        let resultat = document.getElementById("result");
+        a = parseFloat(a);
+        if(a < 0){
+            resultat.textContent="Le nombre est negatif. Impossible de calculer le factorielle";
+            resultat.style.color ="red";
+        }else if(a=== 0 || a=== 1 ){
+            resultat.innerHTML="<b> "+a+" ! = 1</b>";
+            resultat.style.color ="blue";
+        }else{
+            let p = factoriellle(a);
+            resultat.innerHTML="<b> "+a+" ! = "+factoriellle(a)+" </b>";
+            resultat.style.color ="orange";
         }
     }
+
     
 }
