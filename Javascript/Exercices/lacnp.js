@@ -35,8 +35,11 @@ function cnpcalcule(){
           b = parseFloat(b);
 
           const p = b;
-            if(p < 0 || p > a ){
+            if(p < 0 || p > a){
               document.getElementById("erreur").textContent = "Le nombre doit etre compris entre 0 et n";
+              document.getElementById("erreur").style.color = "red";
+            }else if(a<0){
+              document.getElementById("erreur").textContent = "La valeur de n ne doit pas etre negatif";
               document.getElementById("erreur").style.color = "red";
             }
             else{
