@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phrase</title>
+</head>
+<body>
+    <form>
+        <label>Phrase</label><br>
+        <input type="text" id="phrase" placeholder="Entrez votre phrase...">
+        <div id="mess"></div>
+        <div id="resultat"></div>
+        <input type="button" onclick="Afficher()" value="Afficher la phrase">
+    </form>
+
+    <script>
+        function Afficher(){
+            const phrase = document.getElementById("phrase").value;
+            const resultat = document.getElementById("resultat");
+            const message = document.getElementById("mess");
+
+            if(phrase===""){
+                message.textContent = "Veuillez remplir ce champs s'il vous plait !";
+                message.style.color = "red";
+                message.style.fontSize = "16px";
+            }else{
+                message.textContent = "";
+            }
+
+            if(phrase!==""){
+                resultat.textContent = phrase;
+                resultat.style.color = "rgb(255, 0, 204)";
+            }
+        }
+    </script>
+</body>
+</html>
