@@ -14,11 +14,22 @@
     <h1>DOM JavaScript</h1>
     <form>
         <label>Prenom</label><br>
-        <input type="text"  placeholder="Entrez votre prenom..."><br>
+        <input type="text" id="prenom"  placeholder="Entrez votre prenom..."><br>
+        <p id="message1"></p><br>
+
         <label>Nom</label><br>
-        <input type="text"   placeholder="Entrez votre nom..."><br>
+        <input type="text" id="nom"  placeholder="Entrez votre nom..."><br>
+        <p id="message2"></p><br>
+
         <label>Age</label><br>
-        <input type="text" placeholder="Entrez votre age...">
+        <input type="text" id="age" placeholder="Entrez votre age..."><br>
+        <div id="message3"></div><br>
+
+
+        <input type="button" onclick="Afficher()" value="Afficher les infos">
     </form>
+    <h1 id="resultat"></h1>
+    
+ <script src="RevThiorooo.js"></script>
 </body>
 </html>
