@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devoir Js</title>
+</head>
+<body>
+    <form>
+        <label>Libelé </label><br>
+        <input type="text" id="libelle">
+        <p id="msgLibelle"></p>
+
+        <label>Prix Unitaire (Entre 5000 et 150000)</label><br>
+        <input type="text" id="prix">
+        <p id="msgPrix"></p>
+
+        <label>Quantité (Supperieur à 0) </label><br>
+        <input type="text"  id="quantite">
+        <p id="msgQuantite"></p>
+
+        <input type="button" onclick="calculer()" value="Cacluler">
+    </form>
+
+    <h3 id="montantHT"></h3>
+    <h3 id="taxe"></h3>
+    <h3 id="montantTTC"></h3>
+
+    <script src="facture.js"></script>
+</body>
+</html>

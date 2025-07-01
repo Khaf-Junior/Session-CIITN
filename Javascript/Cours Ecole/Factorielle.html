@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>factorielle</title>
+</head>
+<body>
+    <form>
+        <label>Nombre</label><br>
+        <input type="number" id="nombre">
+        <p id="message"></p>
+
+        <input type="button" onclick="Calculer()" value="calculer">
+    </form>
+    <h3 id="resultat"></h3>
+    <script>
+        function factorielle (n){
+            let resultat = 1;
+            let compteur = 1;
+            for(compteur; compteur <= n;compteur++){
+                resultat = resultat * compteur;
+            }
+            return resultat;
+        }
+
+
+        function Calculer(){
+            const nombre = document.getElementById("nombre").value;
+            const message = document.getElementById("message");
+
+            if(nombre === ""){
+                message.textContent = " Ce champ est obligatoire ! ";
+                message.style.color = 'red';
+            }else{
+                message.textContent = "";
+            }
+            if(nombre !== ""){
+                const nombree = parseFloat(nombre);
+                const resultat = document.getElementById("resultat");
+
+                if(nombree < 0){
+                    resultat.textContent = "Factoriel d'un nombre negatif n'existe pas ! ";
+                    resultat.style.color = "red";
+                }else if(nombree === 0 || nombree === 1){
+                    resultat.textContent = nombree + " ! = 1";
+                    resultat.style.color = "blue";
+                }else{
+                    const r = factorielle(nombree);
+                    resultat.textContent = nombree + " ! = " +r  + "";
+                    resultat.style.color = "green";
+                }             
+                
+            }
+        }
+    </script>
+</body>
+</html>
