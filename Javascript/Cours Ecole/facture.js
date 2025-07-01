@@ -7,9 +7,7 @@ function calculer(){
             const msgPrix = document.getElementById("msgPrix");
             const msgQuantite = document.getElementById("msgQuantite");
 
-            const htAffiche = document.getElementById("montantHT");
-            const taxeAffiche = document.getElementById("taxe");
-            const ttcAffiche = document.getElementById("montantTTC");
+            
 
 
             if(libele===""){
@@ -64,6 +62,10 @@ function calculer(){
                     const montantTaxe = montantHT * taux;
                     const montantTTC =  montantHT + montantTaxe;
 
+                    const htAffiche = document.getElementById("montantHT");
+                    const taxeAffiche = document.getElementById("taxe");
+                    const ttcAffiche = document.getElementById("montantTTC");
+
                     htAffiche.textContent = "Montant HT : "+montantHT+" FCFA";
                     taxeAffiche.textContent = "Montant Taxe ("+(taux * 100)+"%) :"+ montantTaxe + " F CFA";
                     ttcAffiche.textContent = "Montant TTC : " + montantTTC + " FCFA";
@@ -74,5 +76,5 @@ function calculer(){
 
                 }
                 
-            }
+             }
         }
