@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label>Prenom</label><br>
+        <input type="text" id="prenom" placeholder="Entrez votre prenom..." oninput="VerifierChamp()"><br><br>
+
+        <label>Nom</label><br>
+        <input type="text" id="nom" placeholder="Entrez votre nom..." oninput="VerifierChamp()"><br><br>
+
+        <label>Age</label><br>
+        <input type="text" id="age" placeholder="Entrez votre age..." oninput="VerifierChamp()"><br><br>
+
+        <input disabled type="button"  id="bouton" onclick="Afficher()" value="Afficher les informations">
+    </form>
+    <p id="resultat"></p>
+    <script>
+        function VerifierChamp(){
+            const prenom = document.getElementById("prenom").value;
+            const nom = document.getElementById("nom").value;
+            const age = document.getElementById("age").value;
+
+            const bouton = document.getElementById("bouton");
+
+            if(prenom !== "" && nom !== "" && age!==""){
+                bouton.disabled = false;
+            }else{
+                bouton.disabled = true;
+            }
+        }
+
+        function Afficher(){
+            const prenom = document.getElementById("prenom").value;
+            const nom = document.getElementById("nom").value;
+            const age = document.getElementById("age").value;
+
+            const resultat = document.getElementById("resultat");
+            resultat.innerHTML = "<b>Prenom</b>: "+prenom+" <br><b>Nom</b>: "+nom+" <br><b>Age</b>: "+age;
+        }
+    </script>
+</body>
+</html>

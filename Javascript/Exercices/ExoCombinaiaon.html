@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combinaison</title>
+</head>
+<body>
+    <label>n</label><br>
+    <input type="number" id="n" oninput="VerifierChamp()"><br><br>
+
+    <label>p</label><br>
+    <input type="number" id="p" oninput="VerifierChamp()"><br><br>
+    <input disabled type="button" id="bouton" value="Calculer" onclick="Calculer()"><br>
+
+    <div id="resultat"></div>
+
+    <script>
+        function VerifierChamp(){
+            const n = document.getElementById("n").value;
+            const p = document.getElementById("p").value;
+
+            const bouton = document.getElementById("bouton");
+
+            if(n !== "" && p !== "" ){
+                bouton.disabled = false;
+            }else{
+                bouton;disabled =true;
+            }
+        }
+
+        function factorielle (n){
+            let resultat = 1;
+            let compteur = 1;
+            for(compteur; compteur <= n; compteur++){
+                resultat *= compteur;
+            }
+            return resultat;
+        }
+
+        function Calculer(){
+            const n = document.getElementById("n").value;
+            const p = document.getElementById("p").value;
+
+            const resultat =  document.getElementById("resultat");
+
+            if(n >= 0 && p>0 && p <= n){
+
+                const a = parseFloat(n);
+                const b = parseFloat(p);
+
+                const c = factorielle(a) / (factorielle(b) * factorielle(a - b));
+
+                resultat.textContent = "C ("+a+" , "+b+" ) = "+ c;
+                resultat.style.color = "blue";
+            }else{
+                resultat.textContent  = "Combinaison Impossible  !";
+                resultat.style.color = "red";
+            }
+        }
+    </script>
+
+</body>
+</html>
