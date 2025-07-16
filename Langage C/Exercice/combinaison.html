@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>Combinaison </legend>
+            <label for="nn">n </label><br>
+            <input type="number" id="n" oninput="verifieChamps()"><br>
+              <label for="np">p</label><br>
+            <input type="text" id="p" oninput="verifieChamps()"><br>
+            <input type="button"  disabled value="afficher" id="bouton" onclick="calculer()"><br>
+            <div id="resultat"></div>
+        </fieldset>
+    </form>
+    <script src="combinaison.js"></script>
+</body>
+</html>

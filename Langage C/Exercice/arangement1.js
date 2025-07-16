@@ -5,42 +5,46 @@ function verifieChamps(){
     if(n!==""&& p!==""){
         bouton.disabled= false;
     }else{
-        bouton.disable=true;
+        bouton.disabled=true;
     }
 
 }
 function factorielle(x){
-    let resultat=1;
-    let i;
-     for(i=1;i<=x;i++){
-        resultat=resultat*i;
-     }
-        return resultat;
+    if (x < 0) {
+        return impossible;
+    }
+    if (x === 0) {
+        return 1;
+    }
+
+    let resultat = 1;
+    for (let i = 1; i <= x; i++) {
+        resultat *= i;
+    }
+    return resultat;
+
 } 
    
 function calculer(){
     let n= document.getElementById("n").value ;
     let p= document.getElementById("p").value ;
     let resultat= document.getElementById("resultat");
-    let f1=factorielle(n);
-     let f2=factorielle(n - p);
-      f1=parseInt(f1);
-       f2=parseInt(f2);
+   
 
-     if(n<0 &&(n-p)<0 || p>n){
-            resultat.texteContent=" impossible";
+     if(n<0 || p<0 || p>n){
+            resultat.textContent=" impossible";
              resultat.style.color=" red ";
             }
-      else if((f1=== 0&& f2 === 0)|| (f1 === 1 && f2 === 1)||(f1 === 0 && f2 === 1)||(f1 === 1 && f2 === 0 )){
-        resultat.textContent="A("+n+","+p+")=1";
-        resultat.style.color= "pink";
 
-         }
-         else{
+   
+     let f1=factorielle(n);
+     let f2=factorielle(n - p);
+      f1=parseInt(f1);
+      f2=parseInt(f2);
         let result= f1/f2;
-       resultat.textContent="A("+n+","+p+")="+result;
+        resultat.textContent="A("+n+","+p+")="+result;
         resultat.style.color="green";
-            }
+            
         
    }
 
