@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revision Generale </title>
+</head>
+<body>
+    <form>
+        <label>Votre Sexe</label>
+        <select  id="sexe" oninput="VerifierChamp()">
+            <option value="">Sellectionner...</option>
+            <option value="homme">Homme</option>
+            <option value="femme">Femme</option>
+        </select><br><br>
+
+        <label >Poids (Kg) </label><br>
+        <input type="number"  id="poids" oninput="VerifierChamp()"><br><br>
+
+        <label >Taille (m) </label><br>
+        <input type="number"  id="taille" oninput="VerifierChamp()"><br><br>
+
+        <input type="button" id="bouton" value="Verifier" disabled onclick="Verification()">
+    </form>
+
+    <p id="AfficherSexe"></p>
+    <p id="AfficherPoids"></p>
+    <p id="AfficherTaille"></p>
+    <p id="AfficherResultat"></p>
+
+    <script>
+       function VerifierChamp(){
+            const sexe = document.getElementById("sexe").value;
+            const poids = document.getElementById("poids").value;
+            const taille = document.getElementById("taille").value;
+
+            const bouton = document.getElementById("bouton")
+    
+            if(sexe !== "" && poids !== "" && taille !== ""){
+                bouton.disabled = false;
+            }else{
+                bouton.disabled = true;
+            }
+       }
+
+       function Verification(){
+            const sexe = document.getElementById("sexe").value;
+            const poids = document.getElementById("poids").value;
+            const taille = document.getElementById("taille").value;
+
+            const p = parseFloat(poids);
+            const t = parseFloat(taille);
+            
+            const AfficherResultat = document.getElementById("AfficherResultat");
+
+            if(sexe === "homme"){
+                
+                if( t >= 1.30 && p >= 60){
+                    AfficherResultat.textContent = "Vous etes Apte ! ";
+                    AfficherResultat.style.color = "green";
+                }else{
+                    AfficherResultat.textContent = "Vous etes Inapte ! ";
+                    AfficherResultat.style.color = "red";
+                }
+            }
+
+             if(sexe === "femme"){
+                if( t >= 1.15 && p >= 30){
+                    AfficherResultat.textContent = "Vous etes Apte ! ";
+                    AfficherResultat.style.color = "green";
+                }else{
+                    AfficherResultat.textContent = " Vous etes Inapte ! ";
+                    AfficherResultat.style.color = "red";
+                }
+            }
+
+            const AfficherSexe = document.getElementById("AfficherSexe");
+            const AfficherPoids = document.getElementById("AfficherPoids");
+            const AfficherTaille = document.getElementById("AfficherTaille");
+
+            AfficherSexe.textContent = "Votre sexe est : " + sexe;
+            AfficherPoids.textContent = "Votre poids est : " + p + " kg";
+            AfficherTaille.textContent = "Votre taille est : " + t + " m";
+
+
+            AfficherSexe.style.color = "blue";
+            AfficherPoids.style.color = "blue";
+            AfficherTaille.style.color = "blue";
+       }
+
+    </script>
+</body>
+</html>

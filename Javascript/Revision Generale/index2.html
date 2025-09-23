@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form >
+        <label>Votre Plat</label>
+        <select  id="plat" >
+            <option value="">Sellectionner...</option>
+            <option value="Thieb">Thieb</option>
+            <option value="Yassa">Yassa</option>
+        </select>
+        <p id="platt"></p>
+      
+        <label >Prix U</label><br>
+        <input type="number"  id="poids">
+        <p id="pu"></p>
+
+        <label >P vente </label><br>
+        <input type="number"  id="taille" >
+        <p id="pv"></p>
+
+        <input type="button" value="Verifier" onclick="Verifier()">
+
+        <script>
+            function Verifier(){
+                const plat = document.getElementById("plat").value;
+                const prixU = document.getElementById("poids").value;
+                const prixV = document.getElementById("taille").value;
+
+                const mess1 = document.getElementById("platt");
+                const mess2 = document.getElementById("pu");
+                const mess3 = document.getElementById("pv");
+
+                if(plat === ""){
+                    mess1.textContent = "Veuillez sellectionnez un plat !";
+                    mess1.style.color ="red";
+                }else{
+                    mess1.textContent = "";
+                }
+
+                 if(prixU === ""){
+                    mess2.textContent = "Veuillez mettre le prix Unitaire !";
+                    mess2.style.color ="red";
+                }else{
+                    mess2.textContent = "";
+                }
+
+                 if(prixV === ""){
+                    mess3.textContent = "Veuillez mettre le prix de vente !";
+                    mess3.style.color ="red";
+                }else{
+                    mess3.textContent = "";
+                }
+            }
+        </script>
+
+    </form>
+</body>
+</html>
