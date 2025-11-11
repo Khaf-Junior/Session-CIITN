@@ -6,5 +6,5 @@ function afficher(event){
     const n=document.getElementById('nom').value;
     const a=document.getElementById('age').value;
     document.getElementById('text').value=p+' '+n+' '+a;
-    document.getElementById('r').style.display='block';
+    document.getElementById('r').style.display='block'; 
 }

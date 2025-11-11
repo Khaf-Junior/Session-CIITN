@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="projet1.css">
+</head>
+<body>
+<div class="haut">
+    <h1>FORMULAIRE D'INSCRIPTION</h1>
+
+</div>
+<form>
+<fieldset>
+      <div class="name">
+            <label>Prénom:</label><br>
+        <input type="text" name="prenom"  id="prenom" placeholder="Votre Prénom"><br>
+        <p id="mprenom"> </p>
+
+            <label>Nom:</label><br>
+        <input type="text" name="nom" id="nom" placeholder="Votre Nom"><br>
+        <p id="mnom"></p>
+
+            <label>Date de Naissance:</label><br>
+        <input type="date" id="ddn" name="date_naissance">
+        <p id="mddn"></p>
+
+            <label>Lieu de Naissance:</label><br>
+        <input type="text" name="lieu_naissance" id="ldn" placeholder="Votre Lieu de Naissance"><br>
+        <p id="mldn"></p>
+
+            <label>Sexe/Genre:</label><br>
+        <input type="radio" name="sexe" value="Homme" id="g1">Masculin
+           <input type="radio" name="sexe" value="Femme" id="g2">Féminin
+           <p id="mg"></p>
+
+            <label>Nationalité:</label><br>
+        <input type="text"  id="nationalite" name="nationalite"><br>
+        <p id="mnationalite"></p>
+
+            <label>Email:</label><br>
+        <input type="email" name="email"  id="email" placeholder="contact@gmail.com" ><br>
+        <p id="memail"></p>
+
+            <label>Numéro de Téléphone:</label><br>
+        <input type="tel" name="telephone"  id="num" placeholder="77 123 45 67"><br>
+        <p id="mnum"></p>
+
+            <label>Adresse Actuelle:</label><br>
+        <input type="text" name="adresse"  id="aa"><br>
+        <p id="maa"></p>
+
+      </div>
+</fieldset>
+      <fieldset>
+      <div class="other">
+        <label>Niveau d'études Actuel:</label><br>
+        <input type="text" name="niveau_etudes" id="nea"><br>
+        <p id="mnea"></p>
+
+        <label>Dernier établissement Fréquenté:</label><br>
+        <input type="text" name="dernier_etablissement" id="def"><br>
+        <p id="mdef"></p>
+
+        <label>Diplômes obtenus:</label><br>
+        <input type="text" name="diplomes" id="do"><br>
+        <p id="mdo"></p>    
+
+        <label>Filière:</label><br>
+        <input type="text" name="filiere" id="filiere"><br>
+        <p id="mfiliere"></p>
+      </div>
+      
+      <br>
+      <input type="button" value="ENVOYER" onclick="afficher()" >
+    </fieldset>
+</form>
+  <script>
+    function afficher(){
+    let a= document.getElementById("prenom").value ;
+    let b= document.getElementById("nom").value ;
+    let c= document.getElementById("ddn").value ;
+    let d= document.getElementById("ldn").value ;
+    let g1 = document.getElementById("g1").checked;
+    let g2 = document.getElementById("g2").checked;
+    let g= document.getElementById("nationalite").value ;
+    let h= document.getElementById("email").value ;
+    let i= document.getElementById("num").value ;
+    let j= document.getElementById("aa").value ;
+    let k= document.getElementById("nea").value ;
+    let l= document.getElementById("def").value ;
+    let m= document.getElementById("do").value ;
+    let n= document.getElementById("filiere").value ;
+    let ma= document.getElementById("mprenom");
+    let mb= document.getElementById("mnom");
+    let mc= document.getElementById("mddn");
+    let md= document.getElementById("mldn");
+    let me= document.getElementById("mg");
+    let mg= document.getElementById("mnationalite");
+    let mh= document.getElementById("memail");
+    let mi= document.getElementById("mnum");
+    let mj= document.getElementById("maa");
+    let mk= document.getElementById("mnea");
+    let ml= document.getElementById("mdef");
+    let mm= document.getElementById("mdo");
+    let mn= document.getElementById("mfiliere");
+    if(a===""){
+        ma.textContent="Veuillez remplir ce champs!";
+        ma.style.color="red";
+    }
+     if(b===""){
+        mb.textContent="Veuillez remplir ce champs!";
+        mb.style.color="red";
+    }
+     if(c===""){
+        mc.textContent="Veuillez remplir ce champs!";
+        mc.style.color="red";
+    }
+     if(d===""){
+        md.textContent="Veuillez remplir ce champs!";
+        md.style.color="red";
+    }
+     if(g===""){
+        mg.textContent="Veuillez remplir ce champs!";
+        mg.style.color="red";
+    }
+     if(h===""){
+        mh.textContent="Veuillez remplir ce champs!";
+        mh.style.color="red";
+    }
+     if(i===""){
+        mi.textContent="Veuillez remplir ce champs!";
+        mi.style.color="red";
+    }
+     if(j===""){
+        mj.textContent="Veuillez remplir ce champs!";
+        mj.style.color="red";
+    }
+      if(k===""){
+        mk.textContent="Veuillez remplir ce champs!";
+        mk.style.color="red";
+    }
+     if(l===""){
+        ml.textContent="Veuillez remplir ce champs!";
+        ml.style.color="red";
+    }
+     if(m===""){
+        mm.textContent="Veuillez remplir ce champs!";
+        mm.style.color="red";
+    }
+     if(n===""){
+        mn.textContent="Veuillez remplir ce champs!";
+        mn.style.color="red";
+    }
+     
+    if(a!==""){
+        ma.textContent="";
+    }
+     if(b!==""){
+        mb.textContent="";
+    }
+     if(c!==""){
+        mc.textContent="";
+    }
+     if(d!==""){
+        md.textContent="";
+    }
+    if(g!==""){
+        mg.textContent="";
+    }
+
+     if(!g1 && !g2 ){
+        me.textContent="veuillez faire un choix!";
+        me.style.color="red";
+    }
+    else{
+        me.textContent="";
+    }
+     if(h!==""){
+        mh.textContent="";
+    }
+     if(i!==""){
+        mi.textContent="";
+     }
+     if(j!==""){
+        mj.textContent="";
+    }
+      if(k!==""){
+        mk.textContent="";
+    }
+     if(l!==""){
+        ml.textContent="";
+    }
+     if(m!==""){
+        mm.textContent="";
+    }
+     if(n!==""){
+        mn.textContent="";
+    }
+       
+}
+  </script>
+</body>
+</html>

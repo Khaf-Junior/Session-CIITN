@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <form action="">
+     <fieldset>
+        <legend> FORMULAIRE DE GESTION </legend>
+        <label for="prenom">PRENOM</label><br>
+        <input type="text" id="pn" oninput="verifieChamps()"><br><br>
+        
+        <label for="nom">NOM</label><br>
+        <input type="text" id="n" oninput="verifieChamps()"><br><br>
+
+        <label for="email">EMAIL</label><br>
+        <input type="email" id="mail" oninput="verifieChamps()"><br><br>
+
+        <label for="age">AGE</label><br>
+        <input type="text"  id="age" oninput="verifieChamps()"><br><br>
+        <p id="ma"></p>
+
+        <label for="niveau_etudes">NIVEAU D'ANNEE D'ETUDE</label><br>
+        <input type="text" id="niv_etudes" oninput="verifieChamps()"><br><br>
+        <p id="mniv"></p> 
+
+        <input type="button" value="afficher" onclick="afficher()" id="bouton" disabled>
+
+     </fieldset>
+    </form>
+    <div id="resultat"></div>
+    <div id="result"></div>
+    <script>
+        function verifieChamps(){
+            let pn =document.getElementById("pn").value;
+            let n =document.getElementById("n").value;
+            let em =document.getElementById("mail").value;
+            let a =document.getElementById("age").value;
+            let niv =document.getElementById("niv_etudes").value;
+            let bouton =document.getElementById("bouton");
+         if(pn==="" || n==="" || em==="" || a==="" || niv==="" ){
+            bouton.disabled=true;
+         }
+         else{
+            bouton.disabled= false;
+         }
+        }
+        function afficher(){
+            let pn =document.getElementById("pn").value;
+            let n =document.getElementById("n").value;
+            let em =document.getElementById("mail").value;
+            let a =document.getElementById("age").value;
+            let niv =document.getElementById("niv_etudes").value;
+            let ma =document.getElementById("ma");
+            let mniv =document.getElementById("mniv");
+             let r= document.getElementById("resultat");
+              let result= document.getElementById("result");
+            if(isNaN(a)){
+                ma.textContent="entrez votre age";
+                ma.style.color= "red";
+            }
+            if(isNaN(niv)){
+                mniv.textContent="entrez votre année d'étude (en chiffre!)";
+                mniv.style.color= "red";
+            }
+            
+            if(a>25 && niv>5){
+                  r.innerHTML="<strong> VOUS ETES INGENIEUR!</strong>";
+                  r.style.color="green";
+            }
+            else{
+               r.innerHTML="<strong> VOUS ETES STAGIAIRE!</strong>";
+               r.style.color="green";
+            }
+           if(pn!=="" && n!=="" && em!=="" && a!=="" && niv!=="" ){
+             result.innerHTML=" <strong>vous vous appelez </strong>"+pn+" "+n+"<strong>, votre email est </strong>"+em+"<strong>, vous avez:</strong>"+a+"<strong>ans, et votre niveau d'année d'étude suppérieur est : </strong>"+niv+"<strong>ans</strong>";
+             result.style.color=" blue";
+            }
+          
+
+
+        }
+    </script>
+      
+</body>
+</html>

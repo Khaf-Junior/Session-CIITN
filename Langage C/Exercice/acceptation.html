@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Critére d'acceptation</h1>
+    <form>
+     <fieldset>
+        <legend>Critére</legend>
+        <select name="sexe" id="sexe" onselect="afficherChamps()">
+            <option value="men">homme</option>
+            <option value="woman">femme</option>
+        </select>
+        <label>poids (kg) </label>
+        <input type="number" id="p" oninput="afficherChamps()">
+        <label for="taille">taille (m) </label>
+        <input type="number" id="t" oninput="afficherChamps() ">
+        <input type="button" value="vérifier" disabled onclick="afficher()" id="bouton" >
+
+     </fieldset>
+    
+    </form>
+   
+</body>
+</html>

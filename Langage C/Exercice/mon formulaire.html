@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Formulaire</h1>
+    <form>
+        <label for="prenom">Prénom :</label>
+        <input type="text" id="prenom" name="prenom"><br><br>
+        <p id="pm"></p> 
+        <label for="nom">Nom :</label>
+        <input type="text" id="nom" name="nom"><br><br>
+         <p id="nm"></p> 
+        <label for="age">Âge :</label>
+        <input type="number" id="age" name="age"><br><br>
+         <p id="ag"></p> 
+        <label for="tel">Numéro de téléphone :</label>
+        <select id="indicatif">
+            <option value="+221">+221 (Sénégal)</option>
+            <option value="+225">+225 (Côte d'Ivoire)</option>
+            <option value="+33">+33 (France)</option>
+        </select>
+         <p id="id"></p> 
+        <input type="tel" id="tel" name="tel" placeholder="Numéro"><br><br>
+         <p id="t"></p> 
+        <label for="password">Mot de passe :</label>
+        <input type="password" id="password" name="password"><br><br>
+         <p id="mp"></p> 
+        <label for="confirmPassword">Confirmer le mot de passe :</label>
+        <input type="password" id="confirmPassword" name="confirmPassword"><br><br>
+         <p id="cmp"></p> 
+       <input type="button" value="valider" onclick="afficher()">
+    </form>
+    <script>
+        function afficher(){
+            let prenom = document.getElementById("prenom").value;
+            let nom = document.getElementById("nom").value;
+            let age = document.getElementById("age").value;
+            let tel = document.getElementById("tel").value;
+            let indicatif = document.getElementById("indicatif").value;
+            let password = document.getElementById("password").value;
+            let confirmPassword = document.getElementById("confirmPassword").value;
+
+            let p=document.getElementById("pm");
+            let n=document.getElementById("nm");
+            let a= document.getElementById("ag");
+            let t= document.getElementById("t");
+            let id= document.getElementById("id");
+            let m= document.getElementById("mp");
+             let c=document.getElementById("cmp");
+             if(prenom===""){
+                p.textContent="veuillez saissir ce champs";
+                p.style.color="red";
+             }
+             if(nom===""){
+                n.textContent="veuillez saissir ce champs";
+                n.style.color="red";
+             }
+             if(age===""){
+                a.textContent="veuillez saissir ce champs";
+                a.style.color="red";
+             }
+             if(tel===""){
+                t.textContent="veuillez saissir ce champs";
+                t.style.color="red";
+             }
+             if(indicatif===""){
+                id.textContent="veuillez saissir ce champs";
+                id.style.color="red";
+             }
+             if(password===""){
+                m.textContent="veuillez saissir ce champs";
+                m.style.color="red";
+             }
+             if(confirmPassword===""){
+                c.textContent="veuillez saissir ce champs";
+                c.style.color="red";
+             }
+              if(prenom!==""){
+                p.textContent="";
+             }
+             if(nom!==""){
+                n.textContent=""; 
+             }
+             if(age!==""){
+                a.textContent="";
+             }
+             if(tel!==""){
+                t.textContent="";
+             }
+             if(indicatif!==""){
+                id.textContent="";
+             }
+             if(password!==""){
+                m.textContent="";
+             }
+             if(confirmPassword!==""){
+                c.textContent="";
+             }
+             if(password!==confirmPassword){
+                c.textContent="ne correspond pas au mot de passe !";
+                c.style.color="red";
+             }
+            
+}
+    </script>
+</body>
+</html>
