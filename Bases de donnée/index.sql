@@ -4,7 +4,7 @@ USE MariamaBa; -- utilisation de la base de donnée
 -- Création de la table etudiant
 CREATE TABLE Etudiants (
 	id INT PRIMARY KEY NOT NULL,
-	NomComplet VARCHAR(100) NOT NULL,
+	NomComplet TEXT NOT NULL,
 	age INT NOT NULL
 );
 
